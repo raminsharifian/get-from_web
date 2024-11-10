@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+if [ "$1" == "init" ]; then
+    rm -rf venv;
+    python -m venv venv
+    ./patch-deps.sh
+elif [ "$1" == "install" ]; then
+    ./patch-deps.sh
+elif [ "$1" == "run" ]; then
+    ./getfrom.sh
+elif [ "$1" == "build" ]; then
+    source venv/bin/activate
+    pip install pyinstaller
+    pyinstaller main.py
+else
+    echo "Invalid parameter"
+fi
