@@ -10,7 +10,7 @@ elif [ "$1" == "run" ]; then
 elif [ "$1" == "build" ]; then
     source venv/bin/activate
     pip install pyinstaller
-    pyinstaller main.py
+    pyinstaller main.py -y
 else
     echo "Invalid parameter"
 fi
