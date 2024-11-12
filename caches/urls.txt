@@ -1,0 +1,6 @@
+a.out
+data/
+dns.txt
+learn/
+main.c
+user-home.desktop
